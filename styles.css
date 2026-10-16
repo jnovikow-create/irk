@@ -1,0 +1,64 @@
+:root {
+  --bg: #0d0e0a;
+  --bg-2: #14130e;
+  --card: #1c1b14;
+  --fg: #e6dcb8;
+  --muted: #94998a;
+  --amber: #edb329;
+  --acid: #85db38;
+  --line: rgba(230, 220, 184, 0.14);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  background:
+    radial-gradient(800px 360px at 50% -10%, rgba(237, 179, 41, 0.16), transparent 60%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 70%, #10110c 100%);
+  background-attachment: fixed;
+  color: var(--fg);
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+a { color: var(--acid); }
+code { font-size: 0.9em; background: rgba(237, 179, 41, 0.12); padding: 1px 6px; border-radius: 6px; }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 28px 18px calc(48px + env(safe-area-inset-bottom)); }
+
+.hero { text-align: center; padding: 12px 0 8px; }
+.logo { width: 112px; height: 112px; border-radius: 26px; margin-bottom: 14px; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45); }
+.logo-sm { width: 64px; height: 64px; border-radius: 16px; display: block; margin: 8px 0 12px; }
+.eyebrow { letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); font-size: 12px; font-weight: 700; }
+h1 { font-size: 42px; letter-spacing: 0.04em; margin: 6px 0 10px; text-transform: uppercase; }
+h2 { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); margin: 28px 0 10px; }
+.lede { color: var(--muted); font-size: 19px; max-width: 36em; margin: 0 auto; }
+.meta { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+p, li { font-size: 16px; margin-bottom: 10px; }
+ul { padding-left: 1.2em; margin-bottom: 8px; }
+
+.shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+.shots img { width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--line); background: #0b0c09; }
+.shot-cap { display: block; text-align: center; color: var(--muted); font-size: 13px; margin-top: 6px; }
+
+.cards { display: grid; gap: 12px; }
+.card, .link-card {
+  background: rgba(28, 27, 20, 0.94);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px 18px;
+}
+.link-card { display: block; text-decoration: none; color: inherit; }
+.link-card strong { display: block; font-size: 18px; margin: 2px 0; }
+.card-kicker { color: var(--amber); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; }
+.card-desc { color: var(--muted); font-size: 14px; }
+.price { color: var(--acid); font-weight: 700; }
+
+.back { display: inline-block; margin-bottom: 8px; font-weight: 650; text-decoration: none; }
+.foot { margin-top: 28px; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 700px) {
+  h1 { font-size: 34px; }
+  .shots { grid-template-columns: 1fr; max-width: 280px; margin-left: auto; margin-right: auto; }
+}
